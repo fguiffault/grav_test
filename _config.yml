@@ -1,9 +1,9 @@
-title: Blog W.W.W
-description: Communauté technique Softeam Ouest
-show_downloads: true
+title: Blog Communauté Technique Ouest
+description: Communauté Technique Ouest - Softeam Digital
+show_downloads: false
 
 baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://softeamouest.github.io" # change this to the base hostname & protocol for your site
+url: https://softeamouest.github.io # change this to the base hostname & protocol for your site
 
 google_analytics:
 # cayman-blog date format
@@ -25,3 +25,10 @@ image: /thumbnail-jumbo.png
 #  app_id: 1798910940422432 # cayman-blog
   #authors: lorepirri
 #  admins:
+
+
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
+    title: Events
