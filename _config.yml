@@ -1,5 +1,5 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and GitHub Pages, with social/SEO features.
+title: Blog W.W.W
+description: Blog de la communauté technique Softeam Ouest
 show_downloads: true
 
 baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
@@ -16,12 +16,12 @@ theme: # leave it empty
 # social
 author: "Mehdi EL KOUHEN"
 image: /thumbnail-jumbo.png
-twitter:
-  username: lorepirri
+#twitter:
+#  username: lorepirri
 #  site:
-facebook:
+#facebook:
   #publisher: 1592372034171500
   #profile_id: 1809805629
-  app_id: 1798910940422432 # cayman-blog
+#  app_id: 1798910940422432 # cayman-blog
   #authors: lorepirri
 #  admins:
