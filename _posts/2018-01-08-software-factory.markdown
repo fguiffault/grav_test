@@ -7,40 +7,38 @@ img: software-factory.jpg # Add image post (optional)
 author: Mehdi El Kouhen
 ---
 
-# Usine Logicielle 
-
 L'usine gère la construction de binaires, leur archivage et leur déploiement dans un cluster Kubernetes.
 
-## Services Internes
+# Services Internes
 
 Les infos sur l'utilisation de nos services sont disponibles sur notre [gitlab](https://git.wildwidewest.xyz/melkouhen/usine).
 
-### GIT
+## GIT
 
 En fonction des besoins & envies, les sources sont gérés via 
 
 * Github
 * git.wildwidewest.xyz
 
-### Jenkins 
+## Jenkins 
  
 Construction des Binaires [https://jenkins.k8.wildwidewest.xyz](https://jenkins.k8.wildwidewest.xyz)
 
-### Nexus
+## Nexus
 
 Archivage des binaires et Images Docker [https://nexus.k8.wildwidewest.xyz/](https://nexus.k8.wildwidewest.xyz/)
 
-### Déploiement
+## Déploiement
 
 Les services sont déployés en tant que services Docker dans un cluster Kubernetes "maison".
 
-## Services externes
+# Services externes
 
-### Slack 
+## Slack 
 
 Nous communiquons entre nous via [slack](http://softeam-ouest.slack.com/).
 
-### Trello
+## Trello
 
 Nous gérons nos tâches via [trello](https://trello.com/)
 
