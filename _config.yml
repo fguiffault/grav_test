@@ -32,3 +32,6 @@ collections:
     output: true
     permalink: /events/:path/
     title: Events
+
+plugins:
+  - jekyll-feed
