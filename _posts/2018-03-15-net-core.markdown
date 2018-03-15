@@ -1,0 +1,35 @@
+---
+layout: post
+title: Une app .NET Core sur Docker et Kubernetes
+date: 2018-03-15
+description: .NET Core
+author: Yvan Razafindramanana
+---
+
+# L'application
+
+[Github](https://github.com/SofteamOuest/wallboard-back)
+
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-vsc
+
+## Activation de CORS
+
+https://docs.microsoft.com/en-us/aspnet/core/security/cors
+
+## Activation de Swagger
+
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger
+
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=netcore-cli%2Cvisual-studio-xml
+
+# Dockerisation
+
+# La théorie
+
+Multistage build
+
+https://docs.docker.com/engine/examples/dotnetcore/#create-a-dockerfile-for-an-aspnet-core-application
+
+https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images
+
+# Déploiement sur le cluster
