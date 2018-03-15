@@ -6,30 +6,149 @@ description: .NET Core
 author: Yvan Razafindramanana
 ---
 
+.NET Core est un framework open source permettant de créer
+des applications web avec le langage C#. Dans cet
+article je présente les étapes de la mise
+en place d'une API REST avec .NET Core, depuis la création des
+ressources à leur déploiement en production.
+
+Quelques technos utilisées:
+
+* .NET Core
+* Swashbuckle pour l'intégration Swagger
+* Moq pour les tests unitaires
+* Docker
+
 # L'application
 
+Il s'agit d'une API REST de gestion d'une liste
+de widgets. Chaque widget a un nom et une
+URL. Le code source du projet est disponible sous 
 [Github](https://github.com/SofteamOuest/wallboard-back)
 
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-vsc
+L'API implémente un simple CRUD. Pour la mise en place, je me
+suis basé sur 
+[ce tutoriel](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-vsc)
+disponible dans la documentation
+officielle de Microsoft.
+
+## Environnement de développement
+
+J'ai préféré utiliser l'outil `dotnet` (`dotnet new`,
+`dotnet add`, etc.) fournie avec le SDK, pour initialiser
+le projet en ligne de commande.
+On peut également le faire via Visual Studio, mais je trouve
+qu'on comprend mieux ce qu'on fait avec l'outil `dotnet`.
+Les tutoriels présentent les deux approches.
+
+En revanche pour l'environnement de développement, il est en théorie
+possible d'utiliser
+un simple éditeur ou (mieux) VSCode: on trouve 
+pas mal d'aides et de plugins. A la longue, je trouve
+que les outils de refactoring et de génération de code
+automatique d'un IDE plus intégré manquent rapidement.
+
+J'ai donc préféré installer Visual Studio Community Edition
+(gratuit, sous conditions) Le top c'est Rider de
+JetBrains, si vous avez la chance d'avoir une licence.
 
 ## Activation de CORS
 
-https://docs.microsoft.com/en-us/aspnet/core/security/cors
+Pour utiliser l'API avec une autre application, j'ai eu besoin
+d'activer CORS et `Access-Control-Allow-Origin`. C'est assez simple
+à mettre en place dans .NET MVC, je me suis basé sur
+[ce tutoriel](https://docs.microsoft.com/en-us/aspnet/core/security/cors)
 
 ## Activation de Swagger
 
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger
+Pour simplifier l'utilisation de l'API lors du développement,
+j'ai ajouté Swagger et son interface graphique SwaggerUI.
 
-https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=netcore-cli%2Cvisual-studio-xml
+L'explication pour la mise en place de Swagger
+[dans ce tutoriel](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger). 
+En l'occurence j'ai utilisé la librairie Swashbuckle comme décrit
+[ici](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=netcore-cli%2Cvisual-studio-xml).
+
+C'est assez rapide, par contre j'ai rencontré un souci pour
+servir Swagger dans un 
+sous-répertoire de mon domaine, par exemple sous `exemple.com/back/swagger.json`.
+Je n'ai pu configurer Swashbuckle que 
+directement à la racine `exemple.com/swagger.json`.
 
 # Dockerisation
 
+L'idée est de conteneuriser l'application avec Docker
+pour la déployer dans le cluster Kubernetes de l'usine logicielle
+de la communauté.
+
 # La théorie
 
-Multistage build
+Il existe plusieurs images Docker permettant de conteneuriser et
+d'exécuter une application .NET Core.
 
-https://docs.docker.com/engine/examples/dotnetcore/#create-a-dockerfile-for-an-aspnet-core-application
+L'image `dotnet:sdk` permet de construire les binaires de
+l'application (.dll) à partir du code source.
+Elle est assez lourde (plus d'un gigaoctet)
 
-https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images
+Il est généralement préférable d'utiliser l'image
+`dotnet:runtime`, plus légère, pour l'exécution.
+
+Il est en théorie possible tout faire
+ avec l'image `dotnet:sdk`, mais le conteneur généré 
+est alors très volumineux et ce n'est pas recommandé
+en production.
+
+# En pratique 
+
+La construction de l'image de l'application nécessite donc
+d'utiliser deux images Docker consécutivement dans le Dockerfile
+(Multistage build):
+`dotnet:sdk` pour compiler le binaire puis `dotnet:runtime` pour
+l'image finale.
+
+```
+FROM microsoft/dotnet:sdk AS build-env
+RUN dotnet publish -c Release -o out
+...
+FROM microsoft/aspnetcore:2.0
+COPY --from=build-env /app/out .
+...
+```
+
+C'est ce qui est conseillé dans
+[les tutoriels Docker](https://docs.docker.com/engine/examples/dotnetcore/#create-a-dockerfile-for-an-aspnet-core-application) 
+et [Microsoft](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
+
+Malheureusement cette solution nécessite une version de Docker
+assez récente, non possible sur notre plateforme.
+
+Nous allons donc utiliser les deux images mais séparément,
+grâce aux facilitées proposées par Jenkins pipeline...
 
 # Déploiement sur le cluster
+
+L'image `dotnet:sdk` est utilisée localement sur la plateforme
+d'intégration pour construire les binaires.
+Le Dockerfile contient uniquement l'image `dotnet:runtime` qui
+utilise les binaires générés précédemment dans l'environnement
+de travaille de la plateforme d'intégration.
+
+```
+...
+containerTemplate(name: 'dotnet', image: 'microsoft/dotnet'),
+...
+container('dotnet') {
+    sh 'dotnet publish -c Release -o out'
+}
+...
+container('docker') {
+    docker build .
+}
+...
+```
+
+TODO
+
+# Conclusion
+
+TODO
