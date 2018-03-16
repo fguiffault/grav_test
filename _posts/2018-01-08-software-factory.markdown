@@ -22,15 +22,25 @@ En fonction des besoins & envies, les sources sont gérés via
 
 ## Jenkins 
  
-Construction des Binaires [https://jenkins.k8.wildwidewest.xyz](https://jenkins.k8.wildwidewest.xyz)
+Construction des Binaires [Jenkins](https://jenkins.k8.wildwidewest.xyz)
 
 ## Nexus
 
-Archivage des binaires et Images Docker [https://nexus.k8.wildwidewest.xyz/](https://nexus.k8.wildwidewest.xyz/)
+Archivage des binaires et Images Docker [Nexus](https://nexus.k8.wildwidewest.xyz/)
+
+## Keycloak
+
+Authentification OpenID Connect [Keycloak](https://keycloak.k8.wildwidewest.xyz/)
+
+## Kibana
+
+Centralisation des Logs [Kibana](https://kibana.k8.wildwidewest.xyz/)
 
 ## Déploiement
 
 Les services sont déployés en tant que services Docker dans un cluster Kubernetes "maison".
+
+Les sources du projet ansible sont disponibles sur [github](https://github.com/SofteamOuest/software-factory.git).
 
 # Services externes
 
