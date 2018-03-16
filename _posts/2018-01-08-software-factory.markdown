@@ -17,8 +17,8 @@ Les infos sur l'utilisation de nos services sont disponibles sur notre [gitlab](
 
 En fonction des besoins & envies, les sources sont gérés via 
 
-* Github
-* git.wildwidewest.xyz
+* [Github](https://github.com/)
+* [Un Gitlab maison](git.wildwidewest.xyz)
 
 ## Jenkins 
  
