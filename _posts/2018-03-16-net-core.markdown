@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Une app .NET Core sur Docker et Kubernetes
-date: 2018-03-15
+date: 2018-03-16
 description: .NET Core
 author: Yvan Razafindramanana
 ---
