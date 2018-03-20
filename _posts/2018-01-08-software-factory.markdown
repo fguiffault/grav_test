@@ -7,7 +7,7 @@ img: software-factory.jpg # Add image post (optional)
 author: Mehdi El Kouhen
 ---
 
-L'usine gère la construction de binaires, leur archivage et leur déploiement dans un cluster Kubernetes.
+Notre Usine Logicielle gère la construction de binaires, leur archivage et leur déploiement dans un cluster Kubernetes.
 
 # Services Internes
 
