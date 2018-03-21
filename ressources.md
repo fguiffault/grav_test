@@ -15,6 +15,6 @@ Ci-dessous la liste des services de l'Usine Logicielle.
 
 Pour réaliser nos développements, nous utilisons les outils suivants : 
 * [Slack](https://softeam-ouest.slack.com)
-* [Equipe Trello](https://trello.com/wildwidewest)
-* [Organisation Github](https://github.com/SofteamOuest) 
+* [Trello](https://trello.com/wildwidewest)
+* [Github](https://github.com/SofteamOuest) 
 
