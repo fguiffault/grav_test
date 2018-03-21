@@ -30,7 +30,7 @@ Le résultat du déploiement est la création d'un [Pod](https://kubernetes.io/d
 Le déployment spécifie :
 
 * l'image Docker à déployer (registry.k8.wildwidewest.xyz/repository/docker-repository/pocs/books-api-simple)
-* le nombre de réplicas (1 ci-dessous))
+* le nombre de replicas (1 ci-dessous))
 * le port exposé par l'application (8080 ci-dessous)
 * le mot de passe d'accès au registry docker stocké sous forme de secret (regsecret ci-dessous)
 
