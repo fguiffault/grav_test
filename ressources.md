@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Services
+title: Services de l'Usine
 permalink: /services/
 ---
 
