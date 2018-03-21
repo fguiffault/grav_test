@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Ressources
-permalink: /ressources/
+title: Services
+permalink: /services/
 ---
 
 Ci-dessous la liste des services de l'Usine Logicielle.
