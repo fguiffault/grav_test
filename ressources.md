@@ -13,7 +13,7 @@ Ci-dessous la liste des services de l'Usine Logicielle.
 * Centralisation des logs [Kibana](https://kibana.k8.wildwidewest.xyz)
 * Gestion de l'authentification OpenId Connect [Keycloak](https://keycloak.k8.wildwidewest.xyz)
 
-Les services sont déployés dans un cluster Kuberbetes.
+Les services sont déployés dans un cluster Kubernetes.
 
 Pour réaliser nos développements, nous utilisons les outils suivants : 
 * [Espace de Travail Softeam-ouest / Slack](https://softeam-ouest.slack.com)
