@@ -6,15 +6,17 @@ permalink: /services/
 
 Ci-dessous la liste des services de l'Usine Logicielle.
 
-* [Jenkins](https://jenkins.k8.wildwidewest.xyz)
-* [Nexus](https://nexus.k8.wildwidewest.xyz)
-* [Helmet](https://helmet.k8.wildwidewest.xyz)
-* [Kibana](https://kibana.k8.wildwidewest.xyz)
-* [Keycloak](https://keycloak.k8.wildwidewest.xyz)
-* [Registry Docker](https://registry.k8.wildwidewest.xyz)
+* Gestion des BUILDS [Jenkins](https://jenkins.k8.wildwidewest.xyz)
+* Gestion des ARTEFACTS [Nexus](https://nexus.k8.wildwidewest.xyz)
+* Gestion des images Docker [Registry Docker](https://registry.k8.wildwidewest.xyz)
+* Gestion des paackages HELM [Helmet](https://helmet.k8.wildwidewest.xyz)
+* Centralisation des logs [Kibana](https://kibana.k8.wildwidewest.xyz)
+* Gestion de l'authentification OpenId Connect [Keycloak](https://keycloak.k8.wildwidewest.xyz)
+
+Les services sont déployés dans un cluster Kuberbetes.
 
 Pour réaliser nos développements, nous utilisons les outils suivants : 
-* [Slack](https://softeam-ouest.slack.com)
-* [Trello](https://trello.com/wildwidewest)
-* [Github](https://github.com/SofteamOuest) 
+* [Espace de Travail Softeam-ouest / Slack](https://softeam-ouest.slack.com)
+* [Equipe WildWideWest / Trello](https://trello.com/wildwidewest)
+* [Organisation SofteamOuest / Github](https://github.com/SofteamOuest) 
 
