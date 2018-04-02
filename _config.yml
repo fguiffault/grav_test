@@ -33,5 +33,9 @@ collections:
     permalink: /events/:path/
     title: Events
 
+paginate: 5
+
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-toc

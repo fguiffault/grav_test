@@ -2,4 +2,10 @@ source 'https://rubygems.org'
 
 gemspec
 
-gem 'jekyll-feed'
+
+group :jekyll_plugins do
+    gem "jekyll-feed"
+    gem "jekyll-paginate"
+    gem 'jekyll-toc'
+end
+ 
