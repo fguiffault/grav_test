@@ -34,7 +34,7 @@ Le déployment spécifie :
 * le port exposé par l'application (8080 ci-dessous)
 * le mot de passe d'accès au registry docker stocké sous forme de secret (regsecret ci-dessous)
 
-```
+```yaml
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
@@ -62,7 +62,7 @@ Dans Kubernetes, les Pods étant des objets éphémères, le [Service](https://k
 
 Kubernetes enregistre les Services dans le DNS local au cluster, l'appel d'un service se fait donc via son nom.
 
-```
+```yaml
 kind: Service
 apiVersion: v1
 metadata:
@@ -84,7 +84,7 @@ Le fragment de code ci-dessous map les requêtes envoyées à l'URL books-api-si
 
 Le proxy utilisé est un proxy [traefik](https://traefik.io/).
 
-```
+```yaml
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:

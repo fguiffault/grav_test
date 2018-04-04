@@ -67,7 +67,7 @@ Le fragment JS du [composant](https://fr.vuejs.org/v2/guide/components.html) con
 * des attributs (exemple : name -> nom du composant)
 * des méthodes (exemple : la méthode created est appelée à la création du composant)
 
-```
+```javascript
 export default {
   name: 'EventList',
   data() {
@@ -89,7 +89,7 @@ Le composant EventList est responsable de télécharger tous les événements av
 * la fonction 'data' du composant contient les données du composant
 * la fonction 'created' est exécutée à la création du composant (téléchargement des événements et stockage dans data)
 
-```
+```javascript
 export default {
   name: 'EventList',
   data() {
@@ -108,7 +108,7 @@ export default {
 
 Les composants Vue.js sont paramétrables via des [props](https://fr.vuejs.org/v2/guide/components.html#Props). Le composant ci-dessous à un props : le status.
 
-```
+```javascript
 export default {
   name: 'event-badge',
   props: ['status'],
@@ -129,7 +129,8 @@ A l'utilisation du composant, il faut valoriser les props.
 Pour intégrer Bootstrap dans le code, je me suis servi du projet [Bootstrap + Vue](https://bootstrap-vue.js.org/). Le projet [Bootstrap + Vue](https://bootstrap-vue.js.org/) apporte des composants Vue.js pour chaque composant Bootstrap.
 
 Exemple de barre de navigation avec Bootstrap + Vue. 
-```
+
+```html
 <b-navbar toggleable type="light" variant="light">
     <b-navbar-toggle target="nav_text_collapse"></b-navbar-toggle>
     <b-navbar-brand>EventMgr</b-navbar-brand>
@@ -144,7 +145,7 @@ Exemple de barre de navigation avec Bootstrap + Vue.
 
 Comme décrit [dans la documentation du projet](https://bootstrap-vue.js.org/docs), il suffit d'ajouter au projet les dépendances bootstrap-vue et bootstrap puis d'enregistrer le plugin BootstrapVue dans le composant "point d'entrée" (composant App.vue).
 
-```
+```javascript
 import BootstrapVue from 'bootstrap-vue'
 
 // nécessaire pour webpack
@@ -163,7 +164,7 @@ Le routeur est paramétré par un ensemble de routes :
 * une route /events (pour afficher tous les événements)
 * une route paramétrée /events/:id par l'identifiant d'un événement (pour afficher l'événement)
 
-```
+```javascript
 export default new Router({
   routes: [
     {
@@ -207,7 +208,7 @@ La compilation du projet est géré par [webpack](https://webpack.js.org/).
 
 La compilation à chaud se fait en exécutant la ligne de commande suivante : webpack publie les sources du projet (via un serveur http local) sur http://localhost:8080
 
-```
+```bash
 npm run dev
 ```
 
@@ -215,7 +216,6 @@ npm run dev
 
 La génération des fichiers HTML/JS/CSS se fait en exécutant la ligne de commande suivante :
 
-```
+```bash
 npm run build
 ```
-
