@@ -1,7 +1,7 @@
 ---
-layout: default
 title: Calendrier
-permalink: /calendar/
+permalink: "/calendar/"
+layout: default
 ---
 
 <div class="span9">

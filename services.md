@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Services de l'Usine
-permalink: /services/
+permalink: "/services/"
+layout: page
 ---
 
 Ci-dessous la liste des services de l'Usine Logicielle.

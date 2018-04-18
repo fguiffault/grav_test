@@ -1,9 +1,9 @@
 ---
-layout: post
 title: Projet MeltingPoc
-date: 2018-01-07
+date: 2018-01-07 00:00:00 Z
+layout: post
 description: Projet pour se former aux nouvelles technologies
-img: meltingpoc.png # Add image post (optional)
+img: meltingpoc.png
 author: Mehdi El Kouhen
 ---
 

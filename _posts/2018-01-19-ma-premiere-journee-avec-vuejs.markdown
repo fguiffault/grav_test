@@ -1,9 +1,9 @@
 ---
-layout: post
 title: Ma première journée avec Vue.js
-date: 2018-01-19
+date: 2018-01-19 00:00:00 Z
+layout: post
 description: Tutorial VueJS
-img: software-factory.jpg # Add image post (optional)
+img: software-factory.jpg
 author: Mehdi El Kouhen
 ---
 

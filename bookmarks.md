@@ -1,7 +1,7 @@
 ---
-layout: page
 title: Bookmarks
-permalink: /bookmarks/
+permalink: "/bookmarks/"
+layout: page
 ---
 
 # Bookmarks 
