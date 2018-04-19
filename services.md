@@ -4,7 +4,7 @@ permalink: "/services/"
 layout: page
 ---
 
-Ci-dessous la liste des services de l'Usine Logicielle.
+Ci-dessous la liste des services de l'Usine Logicielle :
 
 * Gestion des BUILDS : [Jenkins](https://jenkins.k8.wildwidewest.xyz)
 * Gestion des ARTEFACTS : [Nexus](https://nexus.k8.wildwidewest.xyz)
