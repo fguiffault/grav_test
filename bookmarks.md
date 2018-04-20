@@ -1,8 +1,7 @@
 ---
 title: Bookmarks
-permalink: /bookmarks/
+permalink: "/bookmarks/"
 layout: page
-published: true
 ---
 
 # Bookmarks 
