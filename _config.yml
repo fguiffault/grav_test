@@ -1,95 +1,87 @@
-# SITE CONFIGURATION
-baseurl: ""
-url: "https://softeamouest.github.io"
-title: Blog W.W.W # site's title
+---
+title: Blog W.W.W
+timezone: UTC
+collections:
+  portfolio:
+    title: Portfolio
+    output: true
+    permalink: "/:collection/:name"
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+baseurl: ''
+url: https://softeamouest.github.io
 description: Wild Wide West - Communauté Technique Ouest - Softeam Digital
-
-
-# THEME-SPECIFIC CONFIGURATION
 theme_settings:
-  # Meta
-  title: Blog W.W.W # blog's title
+  title: Blog W.W.W
   avatar: assets/images/abeille.jpeg
   favicon: assets/favicon.ico
-  gravatar: # Email MD5 hash
-
-  # Header and footer text
-  header_text: > #two or three lines to describe your site
-     <p>Blog de la Communauté Technique Ouest - Softeam Digital</p>
+  gravatar: 
+  header_text: "<p>Blog de la Communauté Technique Ouest - Softeam Digital</p>\n"
   header_text_feature_image: assets/img/pexels/triangular.jpeg
-  footer_text: >
-   Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+  footer_text: 'Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type
+    on Strap</a>
 
-  # Icons
-  rss: true  # Make sure you created a feed.xml with feed.xml layout
-  email_address: mehdi.elkouhen@softeam.fr # Full email address, e.g. "sam@example.com"
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
-  gitlab:
-  github: "SofteamOuest"
-  google_plus:
-  instagram:
-  keybase:
-  linkedin:  # Full URL
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:  # Full URL
-  steam:
-  tumblr:
-  twitter: # "twitter username"
-  vimeo:
-  wordpress:
-  youtube:
-
-  # Scripts / Features 
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
-  katex: true # Enable if using math markup
+'
+  rss: true
+  email_address: mehdi.elkouhen@softeam.fr
+  behance: 
+  bitbucket: 
+  dribbble: 
+  facebook: 
+  flickr: 
+  gitlab: 
+  github: SofteamOuest
+  google_plus: 
+  instagram: 
+  keybase: 
+  linkedin: 
+  pinterest: 
+  reddit: 
+  soundcloud: 
+  stack_exchange: 
+  steam: 
+  tumblr: 
+  twitter: 
+  vimeo: 
+  wordpress: 
+  youtube: 
+  google_analytics: 
+  disqus_shortname: 
+  katex: true
   portfolio: false
   search: true
   tags: true
-  
-  # Localization strings*
-  str_follow_on: "Follow on"
-  str_rss_follow: "Follow RSS feed"
-  str_email: "Email"
-  str_next_post: "Post suivant"
-  str_previous_post: "Post précédent"
-  str_next_page: "Suivant"
-  str_previous_page: "Précédent"
-  str_continue_reading: "Continue reading"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
-
-  # Colours, typography and padding
-  # Open the "_sass > base" folder, and open "_variables.scss"
-  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
-
-  # Post navigation
+  str_follow_on: Follow on
+  str_rss_follow: Follow RSS feed
+  str_email: Email
+  str_next_post: Post suivant
+  str_previous_post: Post précédent
+  str_next_page: Suivant
+  str_previous_page: Précédent
+  str_continue_reading: Continue reading
+  str_javascript_required_disqus: Please enable JavaScript to view comments.
+  google_fonts: Source+Sans+Pro:400,700,700italic,400italic
   post_navigation: true
-  
-
-# PAGINATION
 paginate: 5
-paginate_path: "blog/page:num"
-
-
-# PORTFOLIO
-collections:
-  portfolio:
-    output: false
-    permalink: /:collection/:name
-
-
-# BUILD SETTINGS
+paginate_path: blog/page:num
 markdown: kramdown
 highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
-plugins: [jekyll-paginate, jekyll-seo-tag]
-theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
-exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
+plugins:
+- jekyll-paginate
+- jekyll-seo-tag
+theme: type-on-strap
+exclude:
+- Gemfile
+- Gemfile.lock
+- type-on-strap.gemspec
+- "*.gem"
+- LICENSE
+- README.md
+- screenshot.png
