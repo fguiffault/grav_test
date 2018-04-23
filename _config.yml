@@ -9,7 +9,7 @@ description: Wild Wide West - Communauté Technique Ouest - Softeam Digital
 theme_settings:
   # Meta
   title: Blog W.W.W # blog's title
-  avatar: assets/img/triangle.svg
+  avatar: assets/images/abeille.jpeg
   favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
 
@@ -29,7 +29,7 @@ theme_settings:
   facebook:
   flickr:
   gitlab:
-  github: "sylhare"
+  github: "SofteamOuest"
   google_plus:
   instagram:
   keybase:
@@ -53,14 +53,14 @@ theme_settings:
   search: true
   tags: true
   
-  # Localization strings
+  # Localization strings*
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
   str_email: "Email"
-  str_next_post: "Next post"
-  str_previous_post: "Previous post"
-  str_next_page: "Next"
-  str_previous_page: "Prev"
+  str_next_post: "Post suivant"
+  str_previous_post: "Post précédent"
+  str_next_page: "Suivant"
+  str_previous_page: "Précédent"
   str_continue_reading: "Continue reading"
   str_javascript_required_disqus: "Please enable JavaScript to view comments."
 
@@ -91,5 +91,5 @@ sass:
   sass_dir: _sass
   style: :compressed
 plugins: [jekyll-paginate, jekyll-seo-tag]
-#theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
+theme: type-on-strap # Uncomment if using the theme as a jekyll theme gem
 exclude: ["Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", "LICENSE", "README.md", "screenshot.png"]
