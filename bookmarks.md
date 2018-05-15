@@ -16,3 +16,4 @@ layout: page
 * [Awesome kubernetes](https://github.com/ramitsurana/awesome-kubernetes)
 * [Kubespray - Ansible](https://github.com/kubernetes-incubator/kubespray)
 * [Monocular](https://github.com/kubernetes-helm/monocular)
+* [50 Outils à tester](https://caylent.com/50-useful-kubernetes-tools/)
