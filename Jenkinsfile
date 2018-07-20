@@ -66,9 +66,9 @@ podTemplate(label: 'meltingpoc-api-gateway-pod', nodeSelector: 'medium', contain
 
             stage('deploy') {
 
-                /* build job: '/SOFTEAMOUEST/chart-run/master', parameters: [
+                build job: '/SOFTEAMOUEST/chart-run/master', parameters: [
                     string(name: 'image', value: "$now"), 
-                    string(name: 'chart', value: "api-gateway")], wait: false */
+                    string(name: 'chart', value: "grav")], wait: false
             }
         }
     }
