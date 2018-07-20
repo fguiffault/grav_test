@@ -42,5 +42,7 @@ RUN curl -o grav-admin-v${GRAV_VERSION}.zip -SL https://github.com/getgrav/grav/
 
 COPY docker-entrypoint.sh /entrypoint.sh
 
+RUN chmod u+x /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["apache2-foreground"]
