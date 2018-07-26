@@ -3,7 +3,7 @@ title: Calculer la couverture de code d'un projet .Net
 date: 2018-07-24 23:59:00 Z
 layout: post
 author: Yvan Razafindramanana
-description: "Couverture de code .Net"
+description: Couverture de code .Net
 ---
 
 Avec les outils [AltCover](https://github.com/SteveGilham/altcover)
