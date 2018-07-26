@@ -8,7 +8,8 @@ description: Couverture de code .Net
 
 Avec les outils [AltCover](https://github.com/SteveGilham/altcover)
 et [ReportGenerator](https://danielpalme.github.io/ReportGenerator/)
-il est relativement facile de générer des statistiques au format HTML sur la couverture de
+il est relativement facile de générer des statistiques au format
+HTML sur la couverture de
 votre code .Net par les tests unitaires.
 
 ```powershell
@@ -18,6 +19,8 @@ ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 
 Article inspiré par l'excellent 
 [Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx).
+
+
 
 ## Principe
 
