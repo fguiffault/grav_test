@@ -1,6 +1,6 @@
 ---
-title: "Calculer la couverture de code d'un projet .Net"
-date: 2018-07-25 00:00:00 +001
+title: Calculer la couverture de code d'un projet .Net
+date: 2018-07-24 23:59:00 Z
 layout: post
 author: Yvan Razafindramanana
 license: CC-BY-SA-4.0
