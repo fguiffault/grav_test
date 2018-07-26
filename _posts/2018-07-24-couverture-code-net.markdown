@@ -17,7 +17,7 @@ votre code .Net par les tests unitaires.
 dotnet test /p:AltCover=true
 ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
-<!--more-->
+"<!--more-->"
 
 Article inspiré par l'excellent 
 [Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx).
