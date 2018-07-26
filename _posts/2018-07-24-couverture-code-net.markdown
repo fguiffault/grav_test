@@ -4,12 +4,10 @@ date: 2018-07-24 23:59:00 Z
 layout: post
 author: Yvan Razafindramanana
 description: Couverture de code .Net
-exerpt: Avec les outils AltCover et ReportGenerator il est relativement facile de
-  générer des statistiques au format HTML sur la couverture de votre code .Net par
-  les tests unitaires.
+excerpt_separator: <!--more-->
 ---
 
-Avec les outils [AltCover](https://github.com/SteveGilham/altcover)
+Avec [AltCover](https://github.com/SteveGilham/altcover)
 et [ReportGenerator](https://danielpalme.github.io/ReportGenerator/)
 il est relativement facile de générer des statistiques au format
 HTML sur la couverture de
@@ -19,11 +17,10 @@ votre code .Net par les tests unitaires.
 dotnet test /p:AltCover=true
 ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
+<!--more-->
 
 Article inspiré par l'excellent 
 [Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx).
-
-
 
 ## Principe
 
