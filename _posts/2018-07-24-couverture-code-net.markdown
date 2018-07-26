@@ -3,11 +3,10 @@ title: Calculer la couverture de code d'un projet .Net
 date: 2018-07-24 23:59:00 Z
 layout: post
 author: Yvan Razafindramanana
-license: CC-BY-SA-4.0
-toc: false
+description: "Couverture de code .Net"
 ---
 
-<acronym>TL;DR</acronym> Avec les outils [AltCover](https://github.com/SteveGilham/altcover)
+Avec les outils [AltCover](https://github.com/SteveGilham/altcover)
 et [ReportGenerator](https://danielpalme.github.io/ReportGenerator/)
 il est relativement facile de générer des statistiques au format HTML sur la couverture de
 votre code .Net par les tests unitaires.
@@ -18,7 +17,7 @@ ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
 
 Article inspiré par l'excellent 
-[Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx)
+[Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx).
 
 ## Principe
 
@@ -46,7 +45,7 @@ de couverture de code ```coverage.xml```.
 On peut installer cet outil dans son projet de tests avec NuGet :
 
 ```powershell
-cd <<MonProjet.Tests>>
+cd ...MonProjet.Tests
 
 dotnet add package AltCover
 ```
@@ -84,7 +83,7 @@ Get-ChildItem $env:USERPROFILE\.nuget\packages\reportgenerator -Recurse -File `
 Enfin lancer la génération du rapport HTML :
 
 ```powershell
-c:\<<...>>ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
+c:\...ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
 
 Le rapport est alors accessible dans ```./coverage/index.htm```.
