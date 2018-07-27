@@ -13,12 +13,12 @@ il est relativement facile de générer des statistiques au format
 HTML sur la couverture de
 votre code .Net par les tests unitaires.
 
+<!--more-->
+
 ```powershell
 dotnet test /p:AltCover=true
 ReportGenerator.exe -reports:coverage.xml -targetdir:./coverage
 ```
-"<!--more-->"
-
 Article inspiré par l'excellent 
 [Scott Hanselman](https://www.hanselman.com/blog/AltCoverAndReportGeneratorGiveAmazingCodeCoverageOnNETCore.aspx).
 
