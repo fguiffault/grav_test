@@ -1,7 +1,0 @@
-version: '3.2'
-services:
-
-  grave:
-    image: "registry.k8.wildwidewest.xyz/repository/docker-repository/grav:${tag}"
-    build: .
-
