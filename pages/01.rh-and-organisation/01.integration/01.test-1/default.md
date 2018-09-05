@@ -1,5 +1,5 @@
 ---
-title: 'Lorep Ipsum'
+title: 'Lorem Ipsum'
 media_order: ours1920.jpg
 published: true
 date: '03-09-2018 10:42'
