@@ -1,5 +1,9 @@
 ---
-title: Informations
-visible: true
+title: 'Création d''un Job Jenkins'
+layout: post
+description: 'Création d''un Job Jenkins'
+img: software-factory.jpg
+author: 'Mehdi El Kouhen'
 ---
 
+<p>Les jobs jenkins g&eacute;r&eacute;s pour le projet meltingpoc sont des jobs "Multibranch Pipeline". Voici les &eacute;tapes de cr&eacute;ation des jobs. # Cr&eacute;ation d'un Job Jenkins * Se connecter &agrave; notre jenkins http://jenkins.k8.wildwidewest.xyz * Cliquer sur "Nouveau item" (menu &agrave; gauche) ![Jenkins Job]({{ "/assets/images/new-job.png" | absolute_url }}) * Saisir le nom du projet &agrave; cr&eacute;er * Cliquer sur "Multibranch Pipeline" * Cliquer sur OK pour valider la cr&eacute;ation du Job * Dans la configuration du Job, cliquer sur "Add source/GIT" ![Sources]({{ "/assets/images/add-source.png" | absolute_url }}) * Saisir l'URL GIT du Projet ![GIT]({{ "/assets/images/new-project-url.png" | absolute_url }}) * Cliquer sur Save en bas de page # Cr&eacute;ation d'un Job MeltingPoc Dans le cas particulier du projet meltingpoc, chaque projet a deux d&eacute;p&ocirc;ts GIT : * un d&eacute;p&ocirc;t contenant les sources du projet * un d&eacute;p&ocirc;t contenant la configuration de d&eacute;ploiement et deux Jobs associ&eacute;s : * un job de compilation des sources du projet (et construction de l'image Docker) * un job de d&eacute;ploiement Dans le cas du projet api-gateway, nous avons * un projet [api-gateway](https://github.com/SofteamOuest/api-gateway) contenant les sources du projet et un projet [api-gateway-run](https://github.com/SofteamOuest/api-gateway-run) pour le d&eacute;ploiement dans le kubernetes * un job [api-gateway](http://jenkins.k8.wildwidewest.xyz/job/api-gateway/) de construction et un job [api-gateway-run](http://jenkins.k8.wildwidewest.xyz/job/api-gateway/) pour le d&eacute;ploiement La structure des deux projets est d&eacute;crite dans l'article [D&eacute;ploiement Kubernetes]({{ site.baseurl }}{% post_url 2018-01-14-deploiement-kubernetes %})</p>
